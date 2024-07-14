@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 
@@ -14,6 +14,7 @@ func handlerError(err error) {
 		log.Fatal(err)
 	}
 }
+
 
 func getInfo(id string) []string {
 	client := req.C()
