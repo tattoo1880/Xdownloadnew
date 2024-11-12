@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os/exec"
 	"strings"
 
 	"github.com/imroc/req/v3"
@@ -104,8 +105,30 @@ func main() {
 	id := strings.Split(url, "status/")[1]
 	fmt.Println("推特id是：", id)
 	list := getInfo(id)
-	for _, v := range list {
-		fmt.Println(v)
+	for k, v := range list {
+		fmt.Println("第", k+1, "个视频地址是：", v)
 	}
+
+	// todo 
+	fmt.Println("请输入要下载的视频序号：")
+	var index int
+
+	fmt.Scanln(&index)
+
+	fmt.Println("您输入的视频序号是：", index)
+	fmt.Println("您选择的视频地址是：", list[index-1])
+
+	new_url := strings.Split(list[index-1], "?tag=")[0]
+	//使用wget list[index-1] 下载视频
+	cmdExec := exec.Command("wget", new_url)
+	err := cmdExec.Run()
+	if err != nil {
+		fmt.Println("下载失败:", err)
+	} else {
+		fmt.Println("下载成功")
+	}
+
+
+
 
 }
