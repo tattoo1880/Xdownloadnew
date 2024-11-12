@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"os/exec"
 	"strings"
 
@@ -121,6 +122,8 @@ func main() {
 	new_url := strings.Split(list[index-1], "?tag=")[0]
 	//使用wget list[index-1] 下载视频
 	cmdExec := exec.Command("wget", new_url)
+	cmdExec.Stdout = os.Stdout
+	cmdExec.Stderr = os.Stderr	
 	err := cmdExec.Run()
 	if err != nil {
 		fmt.Println("下载失败:", err)
