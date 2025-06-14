@@ -22,6 +22,30 @@ func getInfo(id string) []string {
 	client := req.C()
 	request := client.R()
 
+
+// 	headers = {
+//     'accept': '*/*',
+//     'accept-language': 'zh-CN,zh;q=0.9',
+//     'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
+//     'content-type': 'application/json',
+//     'priority': 'u=1, i',
+//     'referer': 'https://x.com/JackSteelAU/status/1931895483724968337',
+//     'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+//     'sec-ch-ua-mobile': '?0',
+//     'sec-ch-ua-platform': '"macOS"',
+//     'sec-fetch-dest': 'empty',
+//     'sec-fetch-mode': 'cors',
+//     'sec-fetch-site': 'same-origin',
+//     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+//     'x-client-transaction-id': 'neq8NAn0WD0jNMClKOp1AoqDRBEMmocz5y4CH2x97E6PdtASQu/sQJ4W0PQO8M+VXodlYJ7KSRAd+4Zi+REYzzWlg+rjng',
+//     'x-csrf-token': '4ae004fe95a13ee8cc45769bfc42f777ff3731f9b7de80d3af0b469cc2ac47eed91f84d7d10a2b875e12b8066d7142b5c0fd794311f1c34f98388cbfe16462e1fb661f761e2cd1f15afddd3a8112d2fe',
+//     'x-twitter-active-user': 'yes',
+//     'x-twitter-auth-type': 'OAuth2Session',
+//     'x-twitter-client-language': 'en',
+//     'x-xp-forwarded-for': 'ff261f1be977c77bf684384b042e08be8dd2289e34dd88c7ca2d55f2d67581c406580ff0e4c22fad8e254d17238830fa0fb7f24fa78523f35e338d0a994df9419cf36a468f37b48463a985ed83f6425077f62d14fd80a3c6fb643e6cacf7da08d97d2bc8d9f62ce7ef8f6e9276042e766926acaee1525d8182fc73af1560cd0787522279fcc165fde3a46ff61a09ea8d957c9a60fc677b40fbff13abb4dda6b4afb5fec0cf017d87aa91686f01b910bc7581f664dccfd878781317834b81c12ef896772a4e4210c2e477ccebdf99ddcc52759fb10d69ae0e53ac5bc02df243c4654136e0bb98f34d5911c05357a3ce8c4f89bb8b1d8d02a770b9521f87925ac9c2',
+//     # 'cookie': 'guest_id_marketing=v1%3A174990001013364461; guest_id_ads=v1%3A174990001013364461; guest_id=v1%3A174990001013364461; __cf_bm=1uek3OYTtepgGLcUMBaLHl62ncNu6pBMPPN8vFpAJWQ-1749900010-1.0.1.1-0g4_5xyhLEzXxMIVj9PN0oygPfaydhwkhA7IicacfC2dQeUSNkpnruU.kbZ9IlxrUf0pWSXbLSfZkCAkHfs4GKloQ0EHVUXiANndlbDJqk8; personalization_id="v1_H6K4LwMccNB+x5dN/aXIXg=="; gt=1933846922655334517; kdt=c3CfYlYOf9Q7Wnm5WLWNCimzFE7W31KemKWBHtlJ; auth_token=903daf0b5421b5d1932777277976e84f7282aaa5; ct0=4ae004fe95a13ee8cc45769bfc42f777ff3731f9b7de80d3af0b469cc2ac47eed91f84d7d10a2b875e12b8066d7142b5c0fd794311f1c34f98388cbfe16462e1fb661f761e2cd1f15afddd3a8112d2fe; att=1-yDmgHZVUZCcDKf4gGI7b9RLWQBtkYPxNzzrp3Gdj; lang=en; twid=u%3D1850829389724033024',
+// }
+
 	request.SetHeaders(map[string]string{
 		"accept": "*/*",
 		"accept-language": "zh-CN,zh;q=0.9",
@@ -36,37 +60,53 @@ func getInfo(id string) []string {
 		"sec-fetch-mode": "cors",
 		"sec-fetch-site": "same-origin",
 		"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-		"x-client-transaction-id": "1HyuKuXbTS0Jl0IAJMEU4bRiQ3lA4LrVIw/QBTgpexcMDPar0QjgrpyZHvrkzl9eAIPHkNZRlflXMs5OGK1DNyzIwr2t1w",
-		"x-csrf-token": "36c6b644b7d47c3cf0c6dd20295d2f913385b6799f068aac210b4ea3cb3edb9baac6a582acf6c3f6b64fd996a632a6d0c579631e1788fd2f3d6dcd9e5c1a887e8c282c840215a1f5fbe8f1c6405aab8b",
+		"x-client-transaction-id": "neq8NAn0WD0jNMClKOp1AoqDRBEMmocz5y4CH2x97E6PdtASQu/sQJ4W0PQO8M+VXodlYJ7KSRAd+4Zi+REYzzWlg+rjng",
+		"x-csrf-token": "4ae004fe95a13ee8cc45769bfc42f777ff3731f9b7de80d3af0b469cc2ac47eed91f84d7d10a2b875e12b8066d7142b5c0fd794311f1c34f98388cbfe16462e1fb661f761e2cd1f15afddd3a8112d2fe",
 		"x-twitter-active-user": "yes",
 		"x-twitter-auth-type": "OAuth2Session",
 		"x-twitter-client-language": "zh-cn",
+		"x-xp-forwarded-for": "ff261f1be977c77bf684384b042e08be8dd2289e34dd88c7ca2d55f2d67581c406580ff0e4c22fad8e254d17238830fa0fb7f24fa78523f35e338d0a994df9419cf36a468f37b48463a985ed83f6425077f62d14fd80a3c6fb643e6cacf7da08d97d2bc8d9f62ce7ef8f6e9276042e766926acaee1525d8182fc73af1560cd0787522279fcc165fde3a46ff61a09ea8d957c9a60fc677b40fbff13abb4dda6b4afb5fec0cf017d87aa91686f01b910bc7581f664dccfd878781317834b81c12ef896772a4e4210c2e477ccebdf99ddcc52759fb10d69ae0e53ac5bc02df243c4654136e0bb98f34d5911c05357a3ce8c4f89bb8b1d8d02a770b9521f87925ac9c2",
 	})
 
+// 	cookies = {
+//     'guest_id_marketing': 'v1%3A174990001013364461',
+//     'guest_id_ads': 'v1%3A174990001013364461',
+//     'guest_id': 'v1%3A174990001013364461',
+//     '__cf_bm': '1uek3OYTtepgGLcUMBaLHl62ncNu6pBMPPN8vFpAJWQ-1749900010-1.0.1.1-0g4_5xyhLEzXxMIVj9PN0oygPfaydhwkhA7IicacfC2dQeUSNkpnruU.kbZ9IlxrUf0pWSXbLSfZkCAkHfs4GKloQ0EHVUXiANndlbDJqk8',
+//     'personalization_id': '"v1_H6K4LwMccNB+x5dN/aXIXg=="',
+//     'gt': '1933846922655334517',
+//     'kdt': 'c3CfYlYOf9Q7Wnm5WLWNCimzFE7W31KemKWBHtlJ',
+//     'auth_token': '903daf0b5421b5d1932777277976e84f7282aaa5',
+//     'ct0': '4ae004fe95a13ee8cc45769bfc42f777ff3731f9b7de80d3af0b469cc2ac47eed91f84d7d10a2b875e12b8066d7142b5c0fd794311f1c34f98388cbfe16462e1fb661f761e2cd1f15afddd3a8112d2fe',
+//     'att': '1-yDmgHZVUZCcDKf4gGI7b9RLWQBtkYPxNzzrp3Gdj',
+//     'lang': 'en',
+//     'twid': 'u%3D1850829389724033024',
+// }
+
 	cookies := []*http.Cookie{
-		{Name: "guest_id", Value: "v1%3A172092576791049011"},
-		{Name: "night_mode", Value: "2"},
-		{Name: "guest_id_marketing", Value: "v1%3A172092576791049011"},
-		{Name: "guest_id_ads", Value: "v1%3A172092576791049011"},
-		{Name: "gt", Value: "1812380012072546732"},
-		{Name: "kdt", Value: "j8XVU8Vn3sEFrqz4nIaMtUYPK1Ec3xSdMnyAQSQO"},
-		{Name: "auth_token", Value: "0aacab7c1ab695cdf1f43296baf67f5b67a2eb83"},
-		{Name: "ct0", Value: "36c6b644b7d47c3cf0c6dd20295d2f913385b6799f068aac210b4ea3cb3edb9baac6a582acf6c3f6b64fd996a632a6d0c579631e1788fd2f3d6dcd9e5c1a887e8c282c840215a1f5fbe8f1c6405aab8b"},
-		{Name: "att", Value: "1-kEckFrFP1K3OWNp4JxbRwFxdr76AQodMj7xJyVw1"},
-		{Name: "lang", Value: "zh-cn"},
-		{Name: "twid", Value: "u%3D732225356388667392"},
-		{Name: "personalization_id", Value: "v1_NWL+26Wc/SU+2Ljoze+0gg=="},
+		{Name: "guest_id", Value: "v1%3A174990001013364461"},
+		{Name: "guest_id_ads", Value: "v1%3A174990001013364461"},
+		{Name: "guest_id_marketing", Value: "v1%3A174990001013364461"},
+		{Name: "__cf_bm", Value: "1uek3OYTtepgGLcUMBaLHl62ncNu6pBMPPN8vFpAJWQ-1749900010-1.0.1.1-0g4_5xyhLEzXxMIVj9PN0oygPfaydhwkhA7IicacfC2dQeUSNkpnruU.kbZ9IlxrUf0pWSXbLSfZkCAkHfs4GKloQ0EHVUXiANndlbDJqk8"},
+		{Name: "personalization_id", Value: "v1_H6K4LwMccNB+x5dN/aXIXg=="},
+		{Name: "gt", Value: "1933846922655334517"},
+		{Name: "kdt", Value: "c3CfYlYOf9Q7Wnm5WLWNCimzFE7W31KemKWBHtlJ"},
+		{Name: "auth_token", Value: "903daf0b5421b5d1932777277976e84f7282aaa5"},
+		{Name: "ct0", Value: "4ae004fe95a13ee8cc45769bfc42f777ff3731f9b7de80d3af0b469cc2ac47eed91f84d7d10a2b875e12b8066d7142b5c0fd794311f1c34f98388cbfe16462e1fb661f761e2cd1f15afddd3a8112d2fe"},
+		{Name: "att", Value: "1-yDmgHZVUZCcDKf4gGI7b9RLWQBtkYPxNzzrp3Gdj"},
+		{Name: "lang", Value: "en"},
+		{Name: "twid", Value: "u%3D1850829389724033024"},
 	}
 
 	request.SetCookies(cookies...)
 
 
 	var data = map[string]string{
-		"variables": fmt.Sprintf(`{"focalTweetId":"%s","with_rux_injections":false,"includePromotedContent":true,"withCommunity":true,"withQuickPromoteEligibilityTweetFields":true,"withBirdwatchNotes":true,"withVoice":true}`,id),
-		"features": `{"rweb_tipjar_consumption_enabled":true,"responsive_web_graphql_exclude_directive_enabled":true,"verified_phone_label_enabled":false,"creator_subscriptions_tweet_preview_api_enabled":true,"responsive_web_graphql_timeline_navigation_enabled":true,"responsive_web_graphql_skip_user_profile_image_extensions_enabled":false,"communities_web_enable_tweet_community_results_fetch":true,"c9s_tweet_anatomy_moderator_badge_enabled":true,"articles_preview_enabled":true,"tweetypie_unmention_optimization_enabled":true,"responsive_web_edit_tweet_api_enabled":true,"graphql_is_translatable_rweb_tweet_is_translatable_enabled":true,"view_counts_everywhere_api_enabled":true,"longform_notetweets_consumption_enabled":true,"responsive_web_twitter_article_tweet_consumption_enabled":true,"tweet_awards_web_tipping_enabled":false,"creator_subscriptions_quote_tweet_preview_enabled":false,"freedom_of_speech_not_reach_fetch_enabled":true,"standardized_nudges_misinfo":true,"tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled":true,"rweb_video_timestamps_enabled":true,"longform_notetweets_rich_text_read_enabled":true,"longform_notetweets_inline_media_enabled":true,"responsive_web_enhance_cards_enabled":false}`,
-		"fieldToggles": `{"withArticleRichContentState":true,"withArticlePlainText":false,"withGrokAnalyze":false}`,
+		"variables": fmt.Sprintf(`{"focalTweetId":"%s","with_rux_injections":false,"rankingMode":"Relevance","includePromotedContent":true,"withCommunity":true,"withQuickPromoteEligibilityTweetFields":true,"withBirdwatchNotes":true,"withVoice":true}`, id),
+		"features": `{"rweb_video_screen_enabled":false,"payments_enabled":false,"profile_label_improvements_pcf_label_in_post_enabled":true,"rweb_tipjar_consumption_enabled":true,"verified_phone_label_enabled":false,"creator_subscriptions_tweet_preview_api_enabled":true,"responsive_web_graphql_timeline_navigation_enabled":true,"responsive_web_graphql_skip_user_profile_image_extensions_enabled":false,"premium_content_api_read_enabled":false,"communities_web_enable_tweet_community_results_fetch":true,"c9s_tweet_anatomy_moderator_badge_enabled":true,"responsive_web_grok_analyze_button_fetch_trends_enabled":false,"responsive_web_grok_analyze_post_followups_enabled":true,"responsive_web_jetfuel_frame":false,"responsive_web_grok_share_attachment_enabled":true,"articles_preview_enabled":true,"responsive_web_edit_tweet_api_enabled":true,"graphql_is_translatable_rweb_tweet_is_translatable_enabled":true,"view_counts_everywhere_api_enabled":true,"longform_notetweets_consumption_enabled":true,"responsive_web_twitter_article_tweet_consumption_enabled":true,"tweet_awards_web_tipping_enabled":false,"responsive_web_grok_show_grok_translated_post":false,"responsive_web_grok_analysis_button_from_backend":true,"creator_subscriptions_quote_tweet_preview_enabled":false,"freedom_of_speech_not_reach_fetch_enabled":true,"standardized_nudges_misinfo":true,"tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled":true,"longform_notetweets_rich_text_read_enabled":true,"longform_notetweets_inline_media_enabled":true,"responsive_web_grok_image_annotation_enabled":true,"responsive_web_enhance_cards_enabled":false}`,
+		"fieldToggles": `{"withArticleRichContentState":true,"withArticlePlainText":false,"withGrokAnalyze":false,"withDisallowedReplyControls":false}`,
 	}
-	targetUrl := "https://x.com/i/api/graphql/QVo2zKMcLZjXABtcYpi0mA/TweetDetail"
+	targetUrl := "https://x.com/i/api/graphql/8IPrg-fiWPM4p735QRfGqA/TweetDetail"
 	//要把data，变成form表单的形式然后get出去
 	request.SetFormData(data)
 
@@ -74,6 +114,8 @@ func getInfo(id string) []string {
 	if err != nil {
 		handlerError(err)
 	}
+
+	fmt.Println("请求成功，数据为：", resp.String())
 
 	var result = map[string]interface{}{}
 	err = resp.Unmarshal(&result)
